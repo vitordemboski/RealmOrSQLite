@@ -6,11 +6,11 @@ Projeto react native de exemplo que implementa realm e sqlite.
 
 Objetivo é analisar a diferença de performance entre esses dois bancos usados para o desenvolvimento mobile.
 
-### Simulações
+## Simulações
 
 O primeiro gif é utilizando o banco realm e o outro o sqlite, carregando os mesmos dados com a mesma quantidade de 10.000 registros.
 
-#### Realm
+### Realm
 
 Estrutura utilizada no banco.
 
@@ -31,17 +31,17 @@ export default class Cliente {
 }
 ```
 
-Criação do schema, inserção e consulta dos 10.000 "clientes"
+Criação do schema, inserção e consulta dos 10.000 "clientes".\
 Tempo aproximado: 1,1 segundos
 
 ![realmInsert](realmInsert.gif)
 
-Apenas a consulta
+Apenas a consulta.\
 Tempo aproximado: 0,3 segundos
 
 ![realm](realm.gif)
 
-#### SQLite
+### SQLite
 
 Estrutura utilizada no banco.
 
@@ -54,12 +54,12 @@ CREATE TABLE IF NOT EXISTS CLIENTE (ID INTEGER PRIMARY KEY,
         PAIS  VARCHAR(80))
 ```
 
-Criação da tabela, inserção e consulta dos 10.000 "clientes"
+Criação da tabela, inserção e consulta dos 10.000 "clientes".\
 Tempo aproximado: 10,2 segundos
 
 ![sqliteInsert](sqliteInsert.gif)
 
-Apenas a consulta
+Apenas a consulta.\
 Tempo aproximado: 3,0 segundos
 
 ![sqlite](sqlite.gif)
